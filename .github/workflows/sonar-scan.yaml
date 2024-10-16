@@ -18,7 +18,7 @@ jobs:
     - name: Build with Maven
       run: mvn install -f MyWebApp/pom.xml
     - name: Sleep before SonarQube Scan
-      run: sleep 45 
+      run: sleep 60  # Increased sleep duration
     - name: SonarQube Scan
       uses: sonarsource/sonarqube-scan-action@master
       with:
@@ -27,8 +27,6 @@ jobs:
           -Dsonar.organization=my-org
           -Dsonar.projectKey=java-webapp
           -Dsonar.verbose=true
-          -Dsonar.ws.connectTimeout=60000
-          -Dsonar.ws.readTimeout=60000
       env:
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        SONAR_TOKEN: 'squ_755f36900abcd01a1fd2de3fd37fabb3f4acbee8'
         SONAR_HOST_URL: 'http://172.24.11.76:9000'
