@@ -2,7 +2,7 @@ name: CI/CD workflow for Maven Build and Sonar Code scan
 on:
   push:
     branches:
-      - main
+      - '*'  
   workflow_dispatch:
 jobs:
   build:
@@ -24,6 +24,7 @@ jobs:
         args: >
           -Dsonar.organization=my-org
           -Dsonar.projectKey=my-Java-webapp
+          -Dsonar.branchName=${{ github.ref_name }} 
           -Dsonar.verbose=true  
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
