@@ -1,1 +1,1 @@
-# SOnarQube-cicd
+# SonarQube-cicd
