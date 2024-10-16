@@ -18,7 +18,7 @@ jobs:
     - name: Build with Maven
       run: mvn install -f MyWebApp/pom.xml
     - name: Sleep before SonarQube Scan
-      run: sleep 60  # Increased sleep duration
+      run: sleep 90
     - name: SonarQube Scan
       uses: sonarsource/sonarqube-scan-action@master
       with:
