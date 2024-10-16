@@ -24,6 +24,7 @@ jobs:
         args: >
           -Dsonar.organization=my-org
           -Dsonar.projectKey=java-webapp
+          -Dsonar.verbose=true
       env:
         SONAR_TOKEN: 'squ_755f36900abcd01a1fd2de3fd37fabb3f4acbee8'
         SONAR_HOST_URL: 'http://172.24.11.76:9000'
