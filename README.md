@@ -1,1 +1,1 @@
-# myJuly2023Weekday
+# SOnarQube-cicd
